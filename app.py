@@ -62,25 +62,3 @@ def process_slack_message(user_input, channel_id):
 
 if __name__ == '__main__':
     app.run(port=5000)
-
-https://e842-37-226-57-170.ngrok-free.app/slack/events
-
-
-Subscribe to bot events
-Event Name	Description	Required Scope
-message.channels
-message.im
-
-Subscribe to events on behalf of users
-message.channels
-message.im
-
-OAuth & Permissions --> Bot Token Scopes
-chat:write
-chat:write.public
-im:read
-im:write
-
-
-First run cheshoir cat on your system locally. Check if localhost:1865 is accessible. 
-Install ngrok with command "choco install ngrok" or "pip install ngrok", after successful installation of ngrok run the following commands "ngrok config add-authtoken YOUR_AUTH_TOKEN_HERE", Next "ngrok http http://localhost:1865"
