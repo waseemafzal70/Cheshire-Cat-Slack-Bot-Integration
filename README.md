@@ -55,12 +55,6 @@ Subscribe to Events on Behalf of Users:
 
 `message.im`
 
-**Enable Event Subscriptions:**
-
-Enable events in the Event Subscriptions section and paste the Ngrok link in the following format:
-
-`https://xxxxxxxxxxxxx.ngrok-free.app/slack/events`
-
 ### 4. Update the Script
 **Replace tokens in the Script:**
 Slack Bot Token:
@@ -72,6 +66,15 @@ Replace `'XXXXXXXXXX'` with your bot's user ID (found via auth.test API).
 Start the Script:
 `python app.py`
 
-### 5. Test Your Bot
+### 5. Event Subscription in Slack
+**Enable Event Subscriptions:**
+
+Enable events in the Event Subscriptions section and paste the Ngrok link in the following format:
+
+`https://xxxxxxxxxxxxx.ngrok-free.app/slack/events`
+
+Make sure that flask app server is running otherwise you'll not be able to get response for challenge. 
+
+### 6. Test Your Bot
 Start chatting with your bot in Slack.
 Check responses in Slack and verify logs in the terminal (e.g., VS Code).
