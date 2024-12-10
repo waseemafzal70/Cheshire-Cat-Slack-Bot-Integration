@@ -4,11 +4,13 @@ from flask import Flask, request, jsonify
 import requests
 import threading
 from websockets.asyncio.client import connect
+import os
 
 app = Flask(__name__)
 
-SLACK_BOT_TOKEN = 'Paste_Your_SLACK_BOT_TOKEN_Here'
-CHESHIRE_CAT_WS_URL = "ws://localhost:1865/ws"
+# Read environment variables
+SLACK_BOT_TOKEN = os.getenv('SLACK_BOT_TOKEN')
+CHESHIRE_CAT_WS_URL = os.getenv('CHESHIRE_CAT_WS_URL', "ws://localhost:1865/ws")
 
 # Function to send messages to Slack
 def send_message_to_slack(channel_id, message):
@@ -41,7 +43,7 @@ def slack_events():
         channel_id = data['event']['channel']
         user_id = data['event']['user']
         
-        if user_id == 'XXXXXXXXXX':  # Replace with actual bot user ID, Try auth.test to get your bot user ID
+        if user_id == os.getenv('BOT_USER_ID'):  # Replace with actual bot user ID, Try auth.test to get your bot user ID
             return jsonify({"status": "ok"})
 
         print(f"Received message from Slack: {user_input}")
