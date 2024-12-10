@@ -17,14 +17,14 @@ This repository provides a Flask-based integration to connect Slack with Cheshir
 Run Cheshire Cat and verify that it is accessible at `http://localhost:1865`.
 
 ### 2. Configure Ngrok
-After installing Ngrok, configure and expose your local server:
+After installing Ngrok, configure and expose your flask local server:
 
 `ngrok config add-authtoken YOUR_AUTH_TOKEN_HERE`
 
-`ngrok http http://localhost:1865`
+`ngrok http http://localhost:5000`
 
 You will see output similar to:
-`https://xxxxxxxxxxxxx.ngrok-free.app -> localhost:1865`
+`https://xxxxxxxxxxxxx.ngrok-free.app -> 127.0.0.1:5000`
 
 Save the `https://` link; it will be used in Slack bot settings.
 
