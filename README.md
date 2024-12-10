@@ -1,5 +1,5 @@
 # Cheshire Cat Slack Bot Integration
-This repository provides a Flask-based integration to connect Slack with Cheshire Cat through WebSockets. The bot listens to messages in Slack, sends them to Cheshire Cat, and relays the responses back to the Slack channel.
+This repository provides a Flask-based integration to connect Slack with Cheshire Cat through WebSockets. The bot listens to messages in Slack, sends them to Cheshire Cat, and send back the responses back to the Slack channel.
 
 ## Prerequisites
 **Cheshire Cat:** Ensure Cheshire Cat is running locally and accessible at http://localhost:1865.
